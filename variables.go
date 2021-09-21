@@ -71,3 +71,64 @@ func mainFour() {
   fmt.Println(b)
   fmt.Println(c)
 }
+
+// mutiple variable declaration
+
+func myFuction() {
+  var a, b, c, d int = 1, 3, 5, 7
+
+  fmt.Println(a)
+  fmt.Println(b)
+  fmt.Println(c)
+  fmt.Println(d)
+}
+
+// If you use the type keyword, it is only possible to declare one type of variable per line.
+
+func myFunctionTwo() {
+  var a, b = 6, "Hello"
+  c, d := 7, "World!"
+
+  fmt.Println(a)
+  fmt.Println(b)
+  fmt.Println(c)
+  fmt.Println(d)
+}
+
+// variable declaration in a block
+
+func myFunctionThree() {
+  var (
+    a int
+    b int = 1
+    c string = "hello"
+  )
+
+  fmt.Println(a)
+  fmt.Println(b)
+  fmt.Println(c)
+}
+
+// A variable can have a short name (like x and y) or a more descriptive name (age, price, carname, etc.).
+
+// Go variable naming rules:
+
+// * A variable name must start with a letter or an underscore character (_)
+// * A variable name cannot start with a digit
+// * A variable name can only contain alpha-numeric characters and underscores (a-z, A-Z, 0-9, and _ )
+// * Variable names are case-sensitive (age, Age and AGE are three different variables)
+// * There is no limit on the length of the variable name
+// * A variable name cannot contain spaces
+// * The variable name cannot be any Go keywords
+
+// Camel case
+
+myVariableName = "John"
+
+// Pascal case
+
+MyVariableName = "John"
+
+// Snake case
+
+my_variable_name = "John"
