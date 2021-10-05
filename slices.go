@@ -63,3 +63,23 @@ func exampleSliceTwo() {
 }
 
 // access elements of a slice
+
+func exampleSliceThree() {
+  prices := []int{10,20,30}
+
+  fmt.Println(prices[0]) // 10
+  fmt.Println(prices[2]) // 20
+}
+
+// change elements of a slice
+
+func exampleSliceFour() {
+  prices := []int{10,20,30}
+  prices[2] = 50
+  fmt.Println(prices[0]) // 10
+  fmt.Println(prices[2]) // 50
+}
+
+// append elements to a slice
+// syntax
+slice_name = append(slice_name, element1, element2, ...)
