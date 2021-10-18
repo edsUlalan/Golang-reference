@@ -25,3 +25,75 @@ func callTwice() {
 // A function name cannot contain spaces
 // If the function name consists of multiple words, techniques introduced for multi-word variable naming can be used
 // Give the function a name that reflects what the function does!
+
+
+// function with parameters
+
+// The following example has a function with one parameter (fname) of type string.
+// When the familyName() function is called, we also pass along a name (e.g. Liam),
+// and the name is used inside the function, which outputs several different first names,
+// but an equal last name
+
+func familyName(fname string) {
+  fmt.Println("Hello", fname, "Refsnes")
+}
+
+func results() {
+  familyName("Liam")
+  familyName("Jenny")
+  familyName("Anja")
+}
+
+// Hello Liam Refsnes
+// Hello Jenny Refsnes
+// Hello Anja Refsnes
+
+// multiple parameters
+
+func familyNameMultiple(fname string, age int) {
+  fmt.Println("Hello", age, "year old", fname, "Refsnes")
+}
+
+func resultsTwo() {
+  familyNameMultiple("Liam", 3)
+  familyNameMultiple("Jenny", 14)
+  familyNameMultiple("Anja", 30)
+}
+
+// Hello 3 year old Liam Refsnes
+// Hello 14 year old Jenny Refsnes
+// Hello 30 year old Anja Refsnes
+
+// function returns
+
+func myFunction(x int, y int) int {
+  return x + y
+}
+
+func resultsThree() {
+  fmt.Println(myFunction(1, 2))
+}
+
+// 3
+
+func myFunction(x int, y int) (result int) {
+  result = x + y
+  return
+}
+
+func resultsFour() {
+  fmt.Println(myFunction(1, 2))
+}
+
+// 3
+
+func myFunction(x int, y int) (result int) {
+  result = x + y
+  return result
+}
+
+func main() {
+  fmt.Println(myFunction(1, 2))
+}
+
+// store the return value in a parameter
