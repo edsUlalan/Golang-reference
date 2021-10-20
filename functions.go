@@ -97,3 +97,57 @@ func main() {
 }
 
 // store the return value in a parameter
+
+func storeReturnValue(x int, y int) (result int) {
+  result = x + y
+  return
+}
+
+func main() {
+  total := storeReturnValue(1, 2)
+  fmt.Println(total)
+}
+
+// multiple return values
+
+func multipleReturnValues(x int, y string) (result int, txt1 string) {
+  result = x + x
+  txt1 = y + " World!"
+  return
+}
+
+func main() {
+  fmt.Println(myFunction(5, "Hello")) // 10 Hello World!
+}
+
+func multipleReturnValues(x int, y string) (result int, txt1 string) {
+  result = x + x
+  txt1 = y + " World!"
+  return
+}
+
+func main() {
+  a, b := multipleReturnValues(5, "Hello")
+  fmt.Println(a, b) // 10 Hello World!
+}
+
+// If we (for some reason) do not want to use some of the returned values,
+// we can add an underscore (_), to omit this value
+
+func main() {
+   _, b := multipleReturnValues(5, "Hello")
+  fmt.Println(b) // Hello World!
+}
+
+// Here, we want to omit the second returned value (txt1 - which is stored in variable b)
+
+func myFunctionOmit(x int, y string) (result int, txt1 string) {
+  result = x + x
+  txt1 = y + " World!"
+  return
+}
+
+func main() {
+   a, _ := myFunctionOmit(5, "Hello")
+  fmt.Println(a) // 10
+}
